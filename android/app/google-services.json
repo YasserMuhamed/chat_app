@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "481028193913",
+    "project_id": "chatii-fire",
+    "storage_bucket": "chatii-fire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481028193913:android:05931576baf63cc4c55ea8",
+        "android_client_info": {
+          "package_name": "com.example.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQO8p5DoVfrxoYKVLA9eicKOUiu6eQFKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
