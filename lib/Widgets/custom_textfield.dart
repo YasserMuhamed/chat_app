@@ -10,17 +10,20 @@ class CustomTxtField extends StatelessWidget {
       this.onChange,
       this.suficon,
       this.obscure,
-      this.validate});
+      this.validate,
+      this.key_type});
   bool? obscure;
   Icon? preicon;
   IconButton? suficon;
   String? txtlabel;
   Function(String)? onChange;
   FormFieldValidator? validate;
+  TextInputType? key_type;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: key_type ?? TextInputType.name,
       validator: validate,
       obscureText: obscure ?? false,
       onChanged: onChange,
