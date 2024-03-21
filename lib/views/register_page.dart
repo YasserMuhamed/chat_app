@@ -118,7 +118,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               SizedBox(height: ScreenHeight * .05),
               CustomButton(
-                ButtonLable: "Register",
+                buttonLabel: "Register",
                 ontap: () async {
                   if (formkey.currentState!.validate()) {
                     setState(() {

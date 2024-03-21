@@ -5,13 +5,13 @@ class CustomButton extends StatelessWidget {
   CustomButton(
       {super.key,
       this.ontap,
-      required this.ButtonLable,
+      required this.buttonLabel,
       this.buttonColor,
       this.fontColor,
       this.height,
       this.width});
 
-  final String ButtonLable;
+  final String buttonLabel;
   Color? fontColor;
   Color? buttonColor;
   double? height;
@@ -28,7 +28,7 @@ class CustomButton extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
         child: Text(
-          ButtonLable,
+          buttonLabel,
           style: TextStyle(color: fontColor ?? Colors.white, fontSize: 22),
         ),
       ),
