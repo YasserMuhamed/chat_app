@@ -4,6 +4,7 @@ import 'package:chat/Widgets/show_snack_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:validators/validators.dart';
 
@@ -34,6 +35,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   GlobalKey<FormState> formkey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   bool isLoading = false;
 
   String? email;
@@ -50,6 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
       child: Scaffold(
           body: Form(
         key: formkey,
+        autovalidateMode: autovalidateMode,
         child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             children: [
@@ -146,7 +149,10 @@ class _RegisterPageState extends State<RegisterPage> {
                       isLoading = false;
                     });
                     // ignore: use_build_context_synchronously
-                  } else {}
+                  } else {
+                    autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
+                  }
                 },
               ),
               SizedBox(

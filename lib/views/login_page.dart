@@ -8,6 +8,7 @@ import 'package:chat/views/register_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:validators/validators.dart';
 
@@ -38,6 +39,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   GlobalKey<FormState> loginformkey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   String? email;
   String? password;
@@ -54,6 +56,7 @@ class _LoginPageState extends State<LoginPage> {
       child: Scaffold(
         // backgroundColor: Colors.grey.shade300,
         body: Form(
+          autovalidateMode: autovalidateMode,
           key: loginformkey,
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -151,9 +154,12 @@ class _LoginPageState extends State<LoginPage> {
                     setState(() {
                       _isLoading = false;
                     });
+                  } else {
+                    autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
                   }
                 },
-                buttonLable: "Login",
+                buttonLabel: "Login",
               ),
               SizedBox(
                 height: ScreenHeight * .01,

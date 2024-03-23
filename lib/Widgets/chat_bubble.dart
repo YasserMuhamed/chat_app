@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 
-class SendChatBubbel extends StatelessWidget {
-  const SendChatBubbel({super.key, required this.message});
+class SendChatBubble extends StatelessWidget {
+  const SendChatBubble({super.key, required this.message});
 
   final String message;
 

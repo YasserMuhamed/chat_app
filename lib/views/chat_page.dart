@@ -99,7 +99,7 @@ class _NewChatPageState extends State<NewChatPage> {
               data["senderEmail"],
             ),
           ),
-          SendChatBubbel(message: data["message"]),
+          SendChatBubble(message: data["message"]),
         ],
       );
     } else {
